@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Bhaiya Ji Auto Parts | Raisen Bike Service & Genuine Parts</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Bhaiya Ji Auto Parts – Bike Service, Genuine Parts, Engine Oil, Accessories, Puncture Repair & Custom Mods. Call +91 7489351044.">
+<meta name="keywords" content="Bhaiya Ji Auto Parts,Raisen bike service,engine oil,auto parts,accessories,puncture repair,Revolt parts,mechanic">
+<meta name="theme-color" content="#ff8800">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Bhaiya Ji Auto Parts">
+<meta property="og:description" content="Bike Service • Genuine Parts • +91 7489351044">
+<meta property="og:type" content="website">
+<meta property="og:url" content="">
+<meta property="og:image" content="logo.png">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --accent1:#0096C7;        /* saffron/orange */
+  --accent2:#ffd54f;        /* golden */
+  --accent3:#00ff9d;        /* neon green */
+  --bg-0:#050505;
+  --bg-1:#0f0f0f;
+  --bg-2:#1e1e1e;
+  --txt-main:#f5f5f5;
+  --txt-sub:#bbbbbb;
+  --radius-sm:6px;
+  --radius-lg:16px;
+  --shadow-1:0 4px 15px rgba(0,0,0,.45);
+  --shadow-glow:0 0 12px rgba(255,136,0,.55);
+  --max-w:1200px;
+  --nav-h:62px;
+  --trans:.25s;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Poppins',sans-serif;
+  background:var(--bg-0);
+  color:var(--txt-main);
+  line-height:1.6;
+  overflow-x:hidden;
+}
+#categories {
+    background: transparent;
+  }
+</style>
+/* lucky glow bg */
+body::before,body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-2;
+  background:
+    radial-gradient(circle at 20% 30%,rgba(255,136,0,.25),transparent 60%),
+    radial-gradient(circle at 80% 10%,rgba(0,255,157,.2),transparent 55%),
+    radial-gradient(circle at 60% 80%,rgba(255,213,79,.15),transparent 60%);
+  filter:blur(30px);
+  animation:bgPulse 12s ease-in-out infinite alternate;
+}
+@keyframes bgPulse{
+  0%{filter:blur(28px) brightness(1);}
+  100%{filter:blur(38px) brightness(1.2);}
+}
+
+/* ===== Nav ===== */
+.nav-bar{
+  position:sticky;top:0;z-index:900;
+  height:var(--nav-h);
+  background:rgba(0,0,0,.7);
+  backdrop-filter:blur(10px);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 2px 8px rgba(0,0,0,.6);
+  padding:0 70px; /* room for logo + menu icon */
+}
+.nav-bar .brand-logo{
+  position:absolute;left:16px;display:flex;align-items:center;gap:8px;
+}
+.nav-bar .brand-logo img{
+  height:40px;width:auto;display:block;
+  filter:drop-shadow(0 0 4px rgba(255,136,0,.8));
+}
+.nav-bar .brand-logo span{
+  display:none;
+  font-weight:700;
+  color:var(--accent1);
+}
+.nav-bar .menu-toggle{
+  display:none;
+  position:absolute;right:16px;
+  font-size:1.9rem;line-height:1;
+  cursor:pointer;color:var(--accent2);
+  user-select:none;
+}
+.nav-bar ul{
+  list-style:none;
+  display:flex;gap:36px;align-items:center;
+}
+.nav-bar ul li a{
+  color:#fff;text-decoration:none;font-weight:600;
+  transition:var(--trans);
+}
+.nav-bar ul li a:hover{color:var(--accent1);text-shadow:var(--shadow-glow);}
+
+/* ===== Hero ===== */
+.hero{
+  min-height:70vh;
+  padding:calc(var(--nav-h) + 40px) 20px 100px;
+  text-align:center;
+  display:flex;flex-direction:column;justify-content:center;align-items:center;
+  background:
+    linear-gradient(135deg,rgba(255,136,0,.15) 0%,rgba(0,255,157,.08) 40%,rgba(0,0,0,1) 100%),
+    url('https://images.unsplash.com/photo-1618005198919-9e5f7df1a087?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  position:relative;
+  overflow:hidden;
+}
+.hero h1{font-size:clamp(2.4rem,6vw,4rem);font-weight:700;text-shadow:0 4px 20px rgba(0,0,0,.9);}
+.hero .tagline{max-width:600px;margin-top:10px;font-size:1.15rem;opacity:.95;}
+.hero .call-btn{
+  margin-top:28px;
+  padding:16px 36px;
+  background:var(--accent1);
+  color:#000;
+  font-weight:700;
+  border-radius:50px;
+  box-shadow:var(--shadow-glow);
+  transition:var(--trans);
+}
+.hero .call-btn:hover{transform:translateY(-2px) scale(1.03);filter:brightness(1.1);}
+
+/* ===== Sections ===== */
+.section{max-width:var(--max-w);margin:90px auto;padding:0 20px;}
+.section h2{text-align:center;color:var(--accent1);font-size:clamp(1.8rem,4vw,2.4rem);margin-bottom:8px;}
+.section .section-line{
+  width:80px;height:4px;background:var(--accent3);
+  margin:12px auto 32px;border-radius:2px;box-shadow:var(--shadow-glow);
+}
+
+/* ===== Cards / grids ===== */
+.grid-cards,.grid-products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:28px;
+}
+.card,.product-card{
+  background:var(--bg-2);
+  padding:28px;
+  border-radius:var(--radius-lg);
+  box-shadow:var(--shadow-1);
+  transition:var(--trans);
+  position:relative;
+  overflow:hidden;
+}
+.card::after,.product-card::after{
+  content:"";
+  position:absolute;inset:0;
+  background:linear-gradient(135deg,transparent 40%,rgba(255,136,0,.15) 100%);
+  opacity:0;transition:var(--trans);
+}
+.card:hover,.product-card:hover{transform:translateY(-6px) scale(1.02);box-shadow:0 6px 22px rgba(0,0,0,.75);}
+.card:hover::after,.product-card:hover::after{opacity:1;}
+.card h3,.product-card h3{margin-bottom:10px;font-size:1.25rem;color:var(--accent2);}
+.card p,.product-card p{color:var(--txt-sub);font-size:.95rem;}
+.product-card img{
+  width:100%;
+  height:auto;
+  border-radius:var(--radius-sm);
+  margin-bottom:12px;
+}
+.product-meta{
+  margin-top:8px;
+  display:flex;align-items:center;justify-content:space-between;gap:8px;
+  flex-wrap:wrap;
+}
+.product-meta .price{color:var(--accent3);font-weight:700;}
+.product-meta a.call-prod{
+  padding:6px 14px;
+  font-size:.9rem;
+  background:var(--accent1);
+  color:#000;
+  border-radius:50px;
+  font-weight:600;
+  transition:var(--trans);
+}
+.product-meta a.call-prod:hover{filter:brightness(1.1);}
+
+/* ===== About / Contact Blocks ===== */
+.about-block,.contact-block{
+  background:var(--bg-2);
+  padding:32px 28px;
+  border-radius:var(--radius-lg);
+  box-shadow:var(--shadow-1);
+  margin-top:20px;
+}
+.about-block p{color:var(--txt-sub);}
+
+/* ===== Contact Form ===== */
+.contact-block form{
+  margin-top:20px;
+  display:flex;flex-direction:column;gap:16px;
+}
+.contact-block input,
+.contact-block textarea{
+  width:100%;
+  padding:14px 16px;
+  font-size:1rem;
+  border-radius:var(--radius-sm);
+  border:1px solid #333;
+  background:#181818;
+  color:#fff;
+  transition:var(--trans);
+}
+.contact-block input:focus,
+.contact-block textarea:focus{
+  outline:none;border-color:var(--accent1);box-shadow:0 0 0 2px rgba(255,136,0,.4);
+}
+.contact-block button{
+  padding:16px 20px;
+  font-size:1rem;
+  font-weight:600;
+  border:none;
+  border-radius:var(--radius-sm);
+  background:var(--accent1);
+  color:#000;
+  cursor:pointer;
+  transition:var(--trans);
+}
+.contact-block button:hover{filter:brightness(1.05);transform:translateY(-1px);}
+.status-msg{font-size:.9rem;display:none;margin-top:4px;}
+
+/* ===== Map ===== */
+.map-embed{margin-top:28px;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-1);}
+.map-embed iframe{width:100%;height:360px;border:0;display:block;}
+
+/* ===== WhatsApp Float ===== */
+.whatsapp-float{
+  position:fixed;width:62px;height:62px;
+  right:20px;bottom:20px;z-index:1200;
+  border-radius:50%;background:#25D366;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 20px rgba(0,0,0,.7);
+  transition:var(--trans);
+}
+.whatsapp-float:hover{transform:scale(1.05);}
+.whatsapp-float img{width:36px;height:36px;}
+
+/* ===== 3-dot Categories Drawer ===== */
+.cat-dots{
+  position:fixed;left:20px;top:20px;
+  width:48px;height:48px;border-radius:50%;
+  background:var(--accent3);color:#000;font-size:1.8rem;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;z-index:1200;
+  box-shadow:var(--shadow-1);
+  transition:var(--trans);
+}
+.cat-dots:hover{transform:scale(1.05);}
+.cat-drawer-backdrop{
+  position:fixed;inset:0;background:rgba(0,0,0,.6);
+  opacity:0;visibility:hidden;transition:var(--trans);z-index:1300;
+}
+.cat-drawer-backdrop.active{opacity:1;visibility:visible;}
+.cat-drawer{
+  position:fixed;top:0;bottom:0;left:-300px;width:280px;
+  background:var(--bg-2);padding:32px 24px;
+  overflow-y:auto;transition:var(--trans);z-index:1301;
+  box-shadow:0 0 25px rgba(0,0,0,.9);
+}
+.cat-drawer.active{left:0;}
+.cat-drawer h4{margin-bottom:16px;color:var(--accent1);font-size:1.25rem;}
+.cat-drawer ul{list-style:none;display:grid;gap:16px;}
+.cat-drawer ul li a{
+  display:block;padding:12px 16px;
+  border-radius:var(--radius-sm);
+  background:#181818;color:#fff;font-size:1rem;
+  transition:var(--trans);
+}
+.cat-drawer ul li a:hover{background:var(--accent1);color:#000;}
+
+/* ===== Footer ===== */
+.site-footer{
+  margin-top:120px;padding:40px 20px;
+  text-align:center;font-size:.9rem;
+  background:#000;color:var(--txt-sub);
+}
+.site-footer a{color:var(--accent3);text-decoration:none;}
+.site-footer a:hover{text-decoration:underline;}
+
+/* ===== Privacy Modal ===== */
+#privacyModal{
+  position:fixed;inset:0;z-index:1400;
+  display:none;align-items:center;justify-content:center;
+}
+#privacyModal.active{display:flex;}
+#privacyModal .pm-back{
+  position:absolute;inset:0;background:rgba(0,0,0,.7);
+}
+#privacyModal .pm-box{
+  position:relative;max-width:600px;width:90%;
+  max-height:80vh;overflow-y:auto;
+  background:var(--bg-2);padding:32px;border-radius:var(--radius-lg);
+  box-shadow:var(--shadow-1);
+}
+#privacyModal .pm-box h3{margin-bottom:16px;color:var(--accent1);}
+#privacyModal .pm-box p{margin-bottom:12px;color:var(--txt-sub);}
+#privacyModal .pm-close{
+  position:absolute;top:8px;right:12px;
+  background:none;border:none;color:var(--accent3);
+  font-size:1.8rem;cursor:pointer;line-height:1;
+}
+
+/* ===== Responsive Nav ===== */
+@media (max-width:768px){
+  .nav-bar{padding:0 48px;}
+  .nav-bar .brand-logo span{display:block;font-size:.95rem;}
+  .nav-bar .menu-toggle{display:block;}
+  .nav-bar ul{
+    flex-direction:column;
+    position:absolute;top:var(--nav-h);left:-100%;right:0;
+    background:#000;padding:28px 0;gap:24px;
+    transition:var(--trans);
+    border-bottom:2px solid var(--accent1);
+  }
+  .nav-bar ul.active{left:0;}
+  .hero{padding-top:calc(var(--nav-h) + 80px);}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== Navigation ===== -->
+
+
+<!-- ===== Hero ===== -->
+<header class="hero" id="home">
+  <h1>BHAIYA JI AUTO PARTS</h1>
+  <p class="tagline">Genuine Parts • Best Bike Services • Custom Light • Puncture Repair</p>
+  <a href="tel:+917489351044" class="call-btn">Call +91 7489351044</a>
+</header>
+
+<!-- ===== Services ===== -->
+<section class="section" id="services">
+  <h2>Our Services</h2>
+  <div class="section-line"></div>
+  <div class="grid-cards">
+    <div class="card"><h3>Bike Servicing</h3><p>Oil change, brakes & periodic maintenance.</p></div>
+    <div class="card"><h3>Genuine Parts</h3><p>Original spares for popular bikes & autos.</p></div>
+    <div class="card"><h3>Engine Rebuild</h3><p>Tuning, repair & performance upgrade.</p></div>
+    <div class="card"><h3>Puncture Repair</h3><p>Tube & tubeless tire puncture service.</p></div>
+    <div class="card"><h3>Custom Mods</h3><p>Lights, exhaust, styling & comfort upgrades.</p></div>
+  </div>
+</section>
+
+<!-- ===== Products ===== -->
+<section class="section" id="products">
+  <h2>Products In Stock</h2>
+  <div class="section-line"></div>
+  <div class="grid-products">
+    <!-- SAMPLE PRODUCT 1 -->
+    <div class="product-card">
+      <img src="https://via.placeholder.com/400x250?text=Engine+Oil+10W40" alt="Engine Oil 10W40">
+      <h3>Engine Oil 20W-40</h3>
+      <p>For 100cc–200cc bikes. Performance grade synthetic & Sl.</p>
+      <div class="product-meta">
+        <span class="price">₹420</span>
+        <a class="call-prod" href="Mob:+917489351044">Call</a>
+      </div>
+    </div>
+    <!-- SAMPLE PRODUCT 2 -->
+    <div class="product-card">
+      <img src="https://via.placeholder.com/400x250?text=SeatCover" alt="Premium SeatCover">
+      <h3>Premium Seat Cover</h3>
+      <p>Custom-fit & waterproof. Multiple colors.</p>
+      <div class="product-meta">
+        <span class="price">₹100 Upto 200</span>
+        <a class="call-prod" href="mob:+917489351044">Call</a>
+      </div>
+    </div>
+    <!-- SAMPLE PRODUCT 3 -->
+    <div class="product-card">
+      <img src="https://via.placeholder.com/400x250?text=Tank+Cover" alt="Tank Cover">
+      <h3>Tank Cover</h3>
+      <p>Protective & stylish. Universal fit kits available.</p>
+      <div class="product-meta">
+        <span class="price">₹70 upto 100</span>
+        <a class="call-prod" href="mob:+917489351044">Call</a>
+      </div>
+    </div>
+    <!-- SAMPLE PRODUCT 4 -->
+    <div class="product-card">
+      <img src="https://via.placeholder.com/400x250?text=Revolt+EV+Parts" alt="Revolt EV Parts">
+      <h3>All Type Parts</h3>
+      <p>Brakes, panels, Cable, Break Shoe, Lever, Grip, Tyre.</p>
+      <div class="product-meta">
+        <span class="price">₹100 upto 400</span>
+        <a class="call-prod" href="mob:+917489351044">Call</a>
+      </div>
+    </div>
+    <!-- SAMPLE PRODUCT 5 -->
+    <div class="product-card">
+      <img src="https://via.placeholder.com/400x250?text=Puncture+Kit" alt="Puncture Repair Kit">
+      <h3>Puncture Repair</h3>
+      <p>Tube & tubeless support.</p>
+      <div class="product-meta">
+        <span class="price">₹40 upto 200</span>
+        <a class="call-prod" href="mob:+917489351044">Call</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- ===== Categories ===== -->
+<section class="section" id="categories">
+  <h2>Categories</h2>
+  <div class="section-line"></div>
+  <div class="grid-cards">
+    <div class="card"><h3>Payment Methods</h3><p>UPI • Card • NetBanking • Cash.</p></div>
+    <div class="card"><h3>Engine Oils</h3><p>All major brands & grades in stock.</p></div>
+    <div class="card"><h3>Accessories</h3><p>Seat/tank covers, helmets, lights & more.</p></div>
+    <div class="card"><h3>Indian Revolt Parts</h3><p>Support for Revolt & electric bikes.</p></div>
+    <div class="card"><h3>Skilled Mechanics</h3><p>Qualified techs, trusted repairs.</p></div>
+  </div>
+</section>
+
+<!-- ===== About ===== -->
+<section class="section" id="about">
+  <h2>About Us</h2>
+  <div class="section-line"></div>
+  <div class="about-block">
+    <p>हम Raisen में आपकी दोपहिया और ऑटो व्हीकल की पूरी देखभाल करते हैं — सर्विसिंग, ऑरिजिनल पार्ट्स, इंजन वर्क, पंक्चर रिपेयर और कस्टम मॉडिफिकेशन सब एक ही जगह। भरोसेमंद मैकेनिक और genuine सामान।</p>
+  </div>
+</section>
+
+<!-- ===== Contact ===== -->
+<section class="section" id="contact">
+  <h2>Quick Contact / Inquiry</h2>
+  <div class="section-line"></div>
+  <div class="contact-block">
+    <p>सीधे बात करना चाहते हैं? <a href="Mob:+917489351044">Call +91 7489351044</a> या <a href="https://wa.me/917489351044?text=Hello%20Bhaiya%20Ji%20Auto%20Parts%20-%20I%20need%20service" target="_blank">WhatsApp करें</a>।</p>
+
+    <form id="contactForm">
+      <input type="text" id="cfName" placeholder="Your Name" required>
+      <input type="tel" id="cfPhone" placeholder="Your Mobile Number" required>
+      <textarea id="cfMsg" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send via WhatsApp</button>
+      <div id="formStatus" class="status-msg"></div>
+    </form>
+
+    <div class="map-embed">
+      <iframe src="https://www.google.com/maps?q=Bhaiya+Ji+Auto+Parts+Raisen&output=embed" loading="lazy" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Floating WhatsApp ===== -->
+<a class="whatsapp-float" href="https://wa.me/917489351044?text=Hello%20Bhaiya%20Ji%20Auto%20Parts%20-%20I%20need%20service" target="_blank" aria-label="Chat on WhatsApp">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+
+<!-- ===== 3-dot Categories Drawer Trigger ===== -->
+<div class="cat-dots" id="catDots">⋮</div>
+<div class="cat-drawer-backdrop" id="catBackdrop"></div>
+<aside class="cat-drawer" id="catDrawer">
+  <h4>Quick Links</h4>
+  <ul>
+    <li><a href="#services" onclick="closeCat()">Services</a></li>
+    <li><a href="#products" onclick="closeCat()">Products</a></li>
+    <li><a href="#categories" onclick="closeCat()">Categories</a></li>
+    <li><a href="#contact" onclick="closeCat()">Contact</a></li>
+    <li><a href="#privacy" onclick="closeCat();openPrivacy();">Privacy Policy</a></li>
+  </ul>
+</aside>
+
+<!-- ===== Footer ===== -->
+<footer class="site-footer">
+  <p>&copy; 2025 Bhaiya Ji Auto Parts. All Rights Reserved. | <a href="#home">Back to Top</a> | <a href="#privacy" id="privacyLink2">Privacy</a></p>
+</footer>
+
+<!-- ===== Privacy Policy Modal ===== -->
+<div id="privacyModal">
+  <div class="pm-back"></div>
+  <div class="pm-box">
+    <button class="pm-close" aria-label="Close">&times;</button>
+    <h3>Privacy Policy</h3>
+    <p>हम आपकी प्राइवेसी का सम्मान करते हैं। हम केवल वही जानकारी लेते हैं जो आप हमें सर्विस या पूछताछ के लिए भेजते हैं — नाम, मोबाइल नंबर, मैसेज।</p>
+    <p>हम आपका डेटा किसी तीसरे पक्ष को नहीं बेचते।</p>
+    <p>डेटा हटवाने के लिए WhatsApp करें: <a href="https://wa.me/917489351044" target="_blank">+91 7489351044</a>.</p>
+  </div>
+</div>
+
+<script>
+/* ===== Mobile Nav ===== */
+const menuToggle=document.getElementById('menuToggle');
+const menu=document.getElementById('menu');
+menuToggle?.addEventListener('click',()=>menu.classList.toggle('active'));
+
+/* ===== Categories Drawer ===== */
+const catDots=document.getElementById('catDots');
+const catDrawer=document.getElementById('catDrawer');
+const catBackdrop=document.getElementById('catBackdrop');
+function openCat(){catDrawer.classList.add('active');catBackdrop.classList.add('active');}
+function closeCat(){catDrawer.classList.remove('active');catBackdrop.classList.remove('active');}
+catDots?.addEventListener('click',openCat);
+catBackdrop?.addEventListener('click',closeCat);
+
+/* ===== Privacy Modal ===== */
+const privacyLink=document.getElementById('privacyLink');
+const privacyLink2=document.getElementById('privacyLink2');
+const privacyModal=document.getElementById('privacyModal');
+const privacyClose=privacyModal.querySelector('.pm-close');
+const privacyBack=privacyModal.querySelector('.pm-back');
+function openPrivacy(e){e?.preventDefault();privacyModal.classList.add('active');}
+function closePrivacy(){privacyModal.classList.remove('active');}
+privacyLink?.addEventListener('click',openPrivacy);
+privacyLink2?.addEventListener('click',openPrivacy);
+privacyClose?.addEventListener('click',closePrivacy);
+privacyBack?.addEventListener('click',closePrivacy);
+
+/* ===== Contact Form -> WhatsApp redirect ===== */
+const cf=document.getElementById('contactForm');
+const cfStatus=document.getElementById('formStatus');
+cf?.addEventListener('submit',e=>{
+  e.preventDefault();
+  const name=encodeURIComponent(document.getElementById('cfName').value.trim());
+  const phone=encodeURIComponent(document.getElementById('cfPhone').value.trim());
+  const msg=encodeURIComponent(document.getElementById('cfMsg').value.trim());
+  if(!name||!phone||!msg){
+    cfStatus.style.display='block';
+    cfStatus.style.color='#ff5252';
+    cfStatus.textContent='Fill All Information.';
+    return;
+  }
+  cfStatus.style.display='redirect mobile call';
+  cfStatus.style.color='#00ff9d';
+  cfStatus.textContent='WhatsApp खोल रहा है...';
+  const waUrl=`https://wa.me/917489351044?text=Name:%20${name}%0APhone:%20${phone}%0AMessage:%20${msg}`;
+  window.open(waUrl,'_blank');
+  cf.reset();
+});
+
+/* ===== Structured Data ===== */
+(function(){
+  const ld={
+    "@context":"https://schema.org",
+    "@type":"AutoRepair",
+    "name":"Bhaiya Ji Auto Parts",
+    "description":"Bike servicing, genuine parts, engine oil, accessories & puncture repair in Raisen.",
+    "address":{"@type":"PostalAddress","addressLocality":"Raisen","addressRegion":"MP","addressCountry":"IN"},
+    "url":window.location.href,
+    "telephone":"+91 7489351044"
+  };
+  const s=document.createElement('script');
+  s.type='application/ld+json';
+  s.textContent=JSON.stringify(ld);
+  document.head.appendChild(s);
+})();
+</script>
+</body>
+  </html>
