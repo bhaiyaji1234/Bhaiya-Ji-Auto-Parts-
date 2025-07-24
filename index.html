@@ -380,8 +380,8 @@ body::before,body::after{
   </div>
 </section>
 
-<-- ===== Floating WhatsApp ===== -->
-<a class="whatsapp-float" href="https://wa.me/917489351044?text=Hello%20Bhaiya%20Ji%20Auto%20Parts%20-%20I%20need%20service" target="_blank" aria-label="Chat on WhatsApp">
+<!-- ===== Floating WhatsApp ===== -->
+<a class="whatsapp-float" href="https://wa.me/917489351044?text=Hello%40Bhaiya%40Ji%40Auto%40Parts%40-%40I%40need%40service" target="_blank" aria-label="Chat on WhatsApp">
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
 </a>
 <!-- ===== 3-dot Categories Drawer Trigger ===== -->
@@ -403,5 +403,45 @@ body::before,body::after{
   <p>&copy; 2025 Bhaiya Ji Auto Parts. All Rights Reserved.</p>
 </footer>
 
+<!-- ===== Privacy Policy Modal ===== -->
+<div id="privacyModal">
+  <div class="pm-back"></div>
+  <div class="pm-box">
+    <button class="pm-close" aria-label="Close">&times;</button>
+    <h3>Privacy Policy</h3>
+    <p>हम आपकी प्राइवेसी का सम्मान करते हैं। हम केवल वही जानकारी लेते हैं जो आप हमें सर्विस या पूछताछ के लिए भेजते हैं — नाम, मोबाइल नंबर, मैसेज।</p>
+    <p>हम आपका डेटा किसी तीसरे पक्ष को नहीं बेचते।</p>
+    <p>डेटा हटवाने के लिए WhatsApp करें: <a href="https://wa.me/917489351044" target="_blank">+91 7489351044</a></p>
+  </div>
+</div>
+
+<script>
+/* ===== Mobile Nav ===== */
+const menuToggle=document.getElementById('menuToggle');
+const menu=document.getElementById('menu');
+menuToggle?.addEventListener('click',()=>menu.classList.toggle('active'));
+
+/* ===== Categories Drawer ===== */
+const catDots=document.getElementById('catDots');
+const catDrawer=document.getElementById('catDrawer');
+const catBackdrop=document.getElementById('catBackdrop');
+function openCat(){catDrawer.classList.add('active');catBackdrop.classList.add('active');}
+function closeCat(){catDrawer.classList.remove('active');catBackdrop.classList.remove('active');}
+catDots?.addEventListener('click',openCat);
+catBackdrop?.addEventListener('click',closeCat);
+
+/* ===== Privacy Modal ===== */
+const privacyLink=document.getElementById('privacyLink');
+const privacyLink2=document.getElementById('privacyLink2');
+const privacyModal=document.getElementById('privacyModal');
+const privacyClose=privacyModal.querySelector('.pm-close');
+const privacyBack=privacyModal.querySelector('.pm-back');
+function openPrivacy(e){e?.preventDefault();privacyModal.classList.add('active');}
+function closePrivacy(){privacyModal.classList.remove('active');}
+privacyLink?.addEventListener('click',openPrivacy);
+privacyLink2?.addEventListener('click',openPrivacy);
+privacyClose?.addEventListener('click',closePrivacy);
+privacyBack?.addEventListener('click',closePrivacy);
+  
 </body>
 </html>
