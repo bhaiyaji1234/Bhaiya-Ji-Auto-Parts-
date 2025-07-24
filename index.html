@@ -221,6 +221,55 @@ body::before,body::after{
   filter:brightness(1.1);
 }
 
+/* ===== Map ===== */
+.map-embed{margin-top:28px;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-1);}
+.map-embed iframe{width:100%;height:360px;border:0;display:block;}
+
+/* ===== WhatsApp Float ===== */
+.whatsapp-float{
+  position:fixed;width:62px;height:62px;
+  right:20px;bottom:20px;z-index:1200;
+  border-radius:50%;background:#25D366;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 20px rgba(0,0,0,.7);
+  transition:var(--trans);
+}
+.whatsapp-float:hover{transform:scale(1.05);}
+.whatsapp-float img{width:36px;height:36px;}
+
+/* ===== 3-dot Categories Drawer ===== */
+.cat-dots{
+  position:fixed;left:20px;bottom:20px;
+  width:48px;height:48px;border-radius:50%;
+  background:var(--accent3);color:#000;font-size:1.8rem;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;z-index:1200;
+  box-shadow:var(--shadow-1);
+  transition:var(--trans);
+}
+.cat-dots:hover{transform:scale(1.05);}
+.cat-drawer-backdrop{
+  position:fixed;inset:0;background:rgba(0,0,0,.6);
+  opacity:0;visibility:hidden;transition:var(--trans);z-index:1300;
+}
+.cat-drawer-backdrop.active{opacity:1;visibility:visible;}
+.cat-drawer{
+  position:fixed;top:0;bottom:0;left:-300px;width:280px;
+  background:var(--bg-2);padding:32px 24px;
+  overflow-y:auto;transition:var(--trans);z-index:1301;
+  box-shadow:0 0 25px rgba(0,0,0,.9);
+}
+.cat-drawer.active{left:0;}
+.cat-drawer h4{margin-bottom:16px;color:var(--accent1);font-size:1.25rem;}
+.cat-drawer ul{list-style:none;display:grid;gap:16px;}
+.cat-drawer ul li a{
+  display:block;padding:12px 16px;
+  border-radius:var(--radius-sm);
+  background:#181818;color:#fff;font-size:1rem;
+  transition:var(--trans);
+}
+.cat-drawer ul li a:hover{background:var(--accent1);color:#000;}
+  
 /* Footer */
 .site-footer{
   margin-top:80px;
@@ -314,55 +363,6 @@ body::before,body::after{
   </div>
 </section>
 
-/* ===== Map ===== */
-.map-embed{margin-top:28px;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-1);}
-.map-embed iframe{width:100%;height:360px;border:0;display:block;}
-
-/* ===== WhatsApp Float ===== */
-.whatsapp-float{
-  position:fixed;width:62px;height:62px;
-  right:20px;bottom:20px;z-index:1200;
-  border-radius:50%;background:#25D366;
-  display:flex;align-items:center;justify-content:center;
-  box-shadow:0 4px 20px rgba(0,0,0,.7);
-  transition:var(--trans);
-}
-.whatsapp-float:hover{transform:scale(1.05);}
-.whatsapp-float img{width:36px;height:36px;}
-
-/* ===== 3-dot Categories Drawer ===== */
-.cat-dots{
-  position:fixed;left:20px;bottom:20px;
-  width:48px;height:48px;border-radius:50%;
-  background:var(--accent3);color:#000;font-size:1.8rem;font-weight:700;
-  display:flex;align-items:center;justify-content:center;
-  cursor:pointer;z-index:1200;
-  box-shadow:var(--shadow-1);
-  transition:var(--trans);
-}
-.cat-dots:hover{transform:scale(1.05);}
-.cat-drawer-backdrop{
-  position:fixed;inset:0;background:rgba(0,0,0,.6);
-  opacity:0;visibility:hidden;transition:var(--trans);z-index:1300;
-}
-.cat-drawer-backdrop.active{opacity:1;visibility:visible;}
-.cat-drawer{
-  position:fixed;top:0;bottom:0;left:-300px;width:280px;
-  background:var(--bg-2);padding:32px 24px;
-  overflow-y:auto;transition:var(--trans);z-index:1301;
-  box-shadow:0 0 25px rgba(0,0,0,.9);
-}
-.cat-drawer.active{left:0;}
-.cat-drawer h4{margin-bottom:16px;color:var(--accent1);font-size:1.25rem;}
-.cat-drawer ul{list-style:none;display:grid;gap:16px;}
-.cat-drawer ul li a{
-  display:block;padding:12px 16px;
-  border-radius:var(--radius-sm);
-  background:#181818;color:#fff;font-size:1rem;
-  transition:var(--trans);
-}
-.cat-drawer ul li a:hover{background:var(--accent1);color:#000;}
-  
 <!-- Footer -->
 <footer class="site-footer">
   <p>&copy; 2025 Bhaiya Ji Auto Parts. All Rights Reserved.</p>
