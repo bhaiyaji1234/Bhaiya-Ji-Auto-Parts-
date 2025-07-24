@@ -306,24 +306,7 @@ body::before,body::after{
   background:none;border:none;color:var(--accent3);
   font-size:1.8rem;cursor:pointer;line-height:1;
 }
-
-/* ===== Responsive Nav ===== */
-@media (max-width:768px){
-  .nav-bar .menu-toggle{display:block;}
-  .nav-bar ul{
-    flex-direction:column;
-    position:absolute;top:var(--nav-h);left:-100%;right:0;
-    background:#000;padding:28px 0;gap:24px;
-    transition:var(--trans);
-    border-bottom:2px solid var(--accent1);
-  }
-  .nav-bar ul.active{left:0;}
-  .hero{padding-top:calc(var(--nav-h) + 80px);}
-}
-</style>
-</head>
-<body>
-
+  
 <!-- ===== Navigation ===== -->
 <nav class="nav-bar">
   <div class="menu-toggle" id="menuToggle">☰</div>
