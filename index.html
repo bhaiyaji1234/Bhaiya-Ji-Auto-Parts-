@@ -283,41 +283,6 @@ body::before,body::after{
 </style>
 </head>
 <body>
-
-/* ===== Privacy Modal ===== */
-#privacyModal{
-  position:fixed;inset:0;z-index:1400;
-  display:none;align-items:center;justify-content:center;
-}
-#privacyModal.active{display:flex;}
-#privacyModal .pm-back{
-  position:absolute;inset:0;background:rgba(0,0,0,.7);
-}
-#privacyModal .pm-box{
-  position:relative;max-width:600px;width:90%;
-  max-height:80vh;overflow-y:auto;
-  background:var(--bg-2);padding:32px;border-radius:var(--radius-lg);
-  box-shadow:var(--shadow-1);
-}
-#privacyModal .pm-box h3{margin-bottom:16px;color:var(--accent1);}
-#privacyModal .pm-box p{margin-bottom:12px;color:var(--txt-sub);}
-#privacyModal .pm-close{
-  position:absolute;top:8px;right:12px;
-  background:none;border:none;color:var(--accent3);
-  font-size:1.8rem;cursor:pointer;line-height:1;
-}
-  
-<!-- ===== Navigation ===== -->
-<nav class="nav-bar">
-  <div class="menu-toggle" id="menuToggle">☰</div>
-  <ul id="menu">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#categories">Categories</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#privacy" id="privacyLink">Privacy</a></li>
-  </ul>
-</nav>
   
 <!-- Hero -->
 <header class="hero" id="home">
@@ -374,6 +339,19 @@ body::before,body::after{
   </div>
 </section>
 
+<!-- ===== Categories ===== -->
+<section class="section" id="categories">
+  <h2>Categories</h2>
+  <div class="section-line"></div>
+  <div class="grid-cards">
+    <div class="card"><h3>Payment Methods</h3><p>UPI • Card • NetBanking • Cash.</p></div>
+    <div class="card"><h3>Engine Oils</h3><p>All major brands & grades in stock.</p></div>
+    <div class="card"><h3>Accessories</h3><p>Seat/tank covers, helmets, lights & more.</p></div>
+    <div class="card"><h3>Indian Revolt Parts</h3><p>Support for Revolt & electric bikes.</p></div>
+    <div class="card"><h3>Skilled Mechanics</h3><p>Qualified techs, trusted repairs.</p></div>
+  </div>
+</section>
+  
 <!-- About -->
 <section class="section" id="about">
   <h2>About Us</h2>
@@ -395,9 +373,31 @@ body::before,body::after{
       <textarea rows="4" placeholder="Your Message" required></textarea>
       <button type="submit">Send via WhatsApp</button>
     </form>
+    
+    <div class="map-embed">
+      <iframe src="https://www.google.com/maps?q=Bhaiya+Ji+Auto+Parts+Raisen&output=embed" loading="lazy" allowfullscreen></iframe>
+    </div>
   </div>
 </section>
 
+<-- ===== Floating WhatsApp ===== -->
+<a class="whatsapp-float" href="https://wa.me/917489351044?text=Hello%20Bhaiya%20Ji%20Auto%20Parts%20-%20I%20need%20service" target="_blank" aria-label="Chat on WhatsApp">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+<!-- ===== 3-dot Categories Drawer Trigger ===== -->
+<div class="cat-dots" id="catDots">⋮</div>
+<div class="cat-drawer-backdrop" id="catBackdrop"></div>
+<aside class="cat-drawer" id="catDrawer">
+  <h4>Categories</h4>
+  <ul>
+    <li><a href="#categories" onclick="closeCat()">Payment Methods</a></li>
+    <li><a href="#categories" onclick="closeCat()">Engine Oils</a></li>
+    <li><a href="#categories" onclick="closeCat()">Accessories</a></li>
+    <li><a href="#categories" onclick="closeCat()">Indian Revolt Parts</a></li>
+    <li><a href="#categories" onclick="closeCat()">Skilled Mechanics</a></li>
+  </ul>
+</aside>
+  
 <!-- Footer -->
 <footer class="site-footer">
   <p>&copy; 2025 Bhaiya Ji Auto Parts. All Rights Reserved.</p>
