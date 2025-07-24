@@ -36,6 +36,17 @@ body{
 
 /* ===== Lucky Sparkle Background ===== */
 body::before,body::after{
+  <nav>
+  <div class="nav-container">
+    <h2>Bhaiya Ji Auto Parts</h2>
+    <div class="menu-toggle" onclick="toggleMenu()">⋮</div>
+    <ul id="nav-links">
+      <li><a href="#products">Products</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#privacy">Privacy Policy</a></li>
+    </ul>
+  </div>
+</nav>
   content:"";
   position:fixed;
   inset:0;
@@ -51,18 +62,6 @@ body::before,body::after{
   0%{filter:blur(28px) brightness(1);}
   100%{filter:blur(38px) brightness(1.2);}
 }
-  <nav>{
-  <div class="nav-container">
-    <h2>Bhaiya Ji Auto Parts</h2>
-    <div class="menu-toggle" onclick="toggleMenu()">⋮</div>
-    <ul id="nav-links">
-      <li><a href="#products">Products</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#privacy">Privacy Policy</a></li>
-    </ul>
-  </div>
-</nav>
-    }
 <section id="privacy" style="display: none; padding: 40px;">
   <h2>Privacy Policy</h2>
   <p>We respect your privacy. Your information is never shared or stored.</p>
@@ -92,14 +91,7 @@ body::before,body::after{
   color:#fff;text-decoration:none;font-weight:600;
   transition:var(--trans);
 }
-.nav-bar ul li a:hover{color:var(--accent1);text-shadow:var(--shadow-glow);}
-  
-/* Hero Section */
-.hero{
-  min-height:80vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
+.nav-bar ul li a:hover{color:var(--accent1);text-shadow:var(--shadow--content:center;
   align-items:center;
   text-align:center;
   background:
